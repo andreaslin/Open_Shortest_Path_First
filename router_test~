@@ -1,0 +1,13 @@
+#!/bin/bash
+pkill -9 java
+rm *.log
+
+./router 1 127.0.0.1 9999 9991 &
+sleep 1
+./router 2 127.0.0.1 9999 9992 &
+sleep 1
+./router 3 127.0.0.1 9999 9993 &
+sleep 1
+./router 4 127.0.0.1 9999 9994 &
+sleep 1
+./router 5 127.0.0.1 9999 9995 &
